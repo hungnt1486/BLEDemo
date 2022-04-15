@@ -96,7 +96,5 @@ platform :ios do
       notify_external_testers: false,
       ipa: "./BLEDemo.ipa"
     )
-
-    delete_temp_keychain(keychain_name)
   end
 end

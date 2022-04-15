@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-and-test:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode.app
+
+    - name: Build and test
+      run: xcodebuild clean test -workspace BLEDemo.xcworkspace -scheme "BLEDemo" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 13 Pro" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO

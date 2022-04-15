@@ -59,7 +59,7 @@ platform :ios do
       in_house: false
     )
     
-    increment_build_number(xcodeproj: "BLEDemo.xcodeproj")
+    increment_build_number(workspace: "BLEDemo.xcworkspace")
     
     cocoapods(
       clean_install: true

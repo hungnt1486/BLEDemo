@@ -1,0 +1,8 @@
+app_identifier("com.jmj.bledemo") # The bundle identifier of your app
+apple_id("hello@modmo.io") # Your Apple email address
+
+itc_team_id("121820942") # App Store Connect Team ID
+team_id("9C894JZ64S") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
